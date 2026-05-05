@@ -2,13 +2,7 @@
    Ксения + Степан — structured styles + calm animations
    ========================================================= */
 
-@font-face {
-  font-family: "Qogol";
-  src: url("../fonts/gogol_regular.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
+
 
 :root {
   --color-text: #000;
@@ -232,10 +226,7 @@ p {
   min-height: 800px;
   overflow: hidden;
   isolation: isolate;
-  background:
-    radial-gradient(circle at 82% 15%, rgba(213, 232, 244, 0.42), transparent 24%),
-    radial-gradient(circle at 14% 84%, rgba(223, 204, 171, 0.24), transparent 26%),
-    #fff;
+  
 }
 
 .hero::before {
@@ -1030,7 +1021,7 @@ p {
 .js-enabled .wishes::before,
 .js-enabled .end::before {
   opacity: 0.82;
-  filter: blur(2px) saturate(0.97);
+  /* filter: blur(2px) saturate(0.97); */
   transform: scale(1.025);
   transform-origin: center;
   transition:
@@ -1043,7 +1034,7 @@ p {
 .js-enabled .wishes.is-section-visible::before,
 .js-enabled .end.is-section-visible::before {
   opacity: 1;
-  filter: blur(0) saturate(1);
+  /* filter: blur(0) saturate(1); */
   transform: scale(1);
 }
 
@@ -1053,11 +1044,11 @@ p {
 
 @keyframes heroPhotoIn {
   0% {
-    filter: blur(2px) saturate(0.96);
+    /* filter: blur(2px) saturate(0.96); */
     transform: translate3d(0, 18px, 0) scale(1.065);
   }
   100% {
-    filter: blur(0) saturate(1);
+    /* filter: blur(0) saturate(1); */
     transform: translate3d(calc(var(--hero-x, 0) * 1px), calc(var(--hero-y, 0) * 1px), 0) scale(1.035);
   }
 }
